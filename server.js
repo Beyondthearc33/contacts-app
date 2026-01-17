@@ -3,9 +3,6 @@ const express = require("express");
 const { initDb } = require("./db/mongoConnect");
 require("dotenv").config();
 
-// Temporary
-console.log("ENV TEST:", process.env.TEST_MESSAGE);
-
 const app = express();
 const port = process.env.PORT || 3000;
 
