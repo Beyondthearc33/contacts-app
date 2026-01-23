@@ -4,3 +4,43 @@ GET http://localhost:3000/contacts
 
 ### Specific ID request
 GET http://localhost:3000/contacts/696bcc03f2510b6bea255b9c
+
+@baseUrl = http://localhost:3000
+@id = 696bcc03f2510b6bea255b9c
+
+### GET
+GET {{baseUrl}}/contacts
+
+
+### GET 
+GET {{baseUrl}}/contacts/{{id}}
+
+
+### POST
+POST {{baseUrl}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Luke",
+  "lastName": "Lucas",
+  "email": "luke@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
+}
+
+
+### PUT
+PUT {{baseUrl}}/contacts/{{id}}
+Content-Type: application/json
+
+{
+  "firstName": "Luke",
+  "lastName": "Lucas",
+  "email": "luke@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1990-01-01"
+}
+
+
+### DELETE
+DELETE {{baseUrl}}/contacts/{{id}}
