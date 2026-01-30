@@ -6,7 +6,7 @@ GET http://localhost:3000/contacts
 GET http://localhost:3000/contacts/696bcc03f2510b6bea255b9c
 
 @baseUrl = http://localhost:3000
-@id = 696bcc03f2510b6bea255b9c
+@id = 696bcc20f2510b6bea255b9e
 
 ### GET
 GET {{baseUrl}}/contacts

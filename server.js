@@ -3,11 +3,15 @@ const express = require("express");
 const { initDb } = require("./db/mongoConnect");
 require("dotenv").config();
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
 // ******* Middleware *********
 app.use(express.json());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // If url starts with. /contacts -> go to contactRoutes file and look for url that matches remaining.
 app.use("/contacts", contactsRoutes);
