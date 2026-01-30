@@ -44,3 +44,42 @@ Content-Type: application/json
 
 ### DELETE
 DELETE {{baseUrl}}/contacts/{{id}}
+
+
+######### RENDER #########
+@renderBase = https://cse341-f6ja.onrender.com
+
+### GET all contacts
+GET {{renderBase}}/contacts
+
+### GET contact by id
+GET {{renderBase}}/contacts/696bcc69f2510b6bea255ba0
+
+### POST create contact
+POST {{renderBase}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Luke",
+  "lastName": "Lucas",
+  "email": "luke@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1996-01-30"
+}
+
+
+
+### PUT update contact
+PUT {{renderBase}}/contacts/696bcc69f2510b6bea255ba0
+Content-Type: application/json
+
+{
+  "firstName": "Luke",
+  "lastName": "Lucas",
+  "email": "luke.updated@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1996-01-30"
+}
+
+### DELETE contact
+DELETE {{renderBase}}/contacts/696bcc69f2510b6bea255ba0
